@@ -63,12 +63,26 @@ def ex6():
 # VII - Peça para o aluno digitar seu RA e depois imprima apenas os dois últimos algarismos do RA
 def ex7():
     ra = str(input('digite seu Registro de Aluno:'))
-    final = ra[-3:]
+    final = ra[-2:]
     return f'RA: {ra} 3 ultimos: {final}'
 
 # VIII - Elabore um algoritmo que peça para o aluno fornecer as 4 melhores notas das ACs, as 3 notas PAI e a nota da avaliação final e calcule sua nota final.
+# Nota Final = 30% MAC + 30% MPAI + 40% Prova
+
+# mf = média final 
 def ex8():
-    pass
+    ac1 = float(input('digite AC1'))
+    ac2 = float(input('digite AC2'))
+    ac3 = float(input('digite AC3'))
+    ac4 = float(input('digite AC4'))
+    pai1 = float(input('digite PAI1'))
+    pai2 = float(input('digite PAI2'))
+    pai3 = float(input('digite PAI3'))
+    final = float(input('digite provafinal'))
+    ac_total30 = ((ac1 + ac2 + ac3 + ac4)/4) / 100 * 30
+    pai_total = ((pai1 + pai2 + pai3)/3) / 100 * 30
+    final_total = final / 100 * 40
+    return f'a media final foi: {(ac_total30 + pai_total + final_total)}'
 
 
 
